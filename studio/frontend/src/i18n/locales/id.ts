@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const id = {
+  chatTree: {
+    title: "Pohon chat",
+    allChats: "Semua chat",
+    chooseMessage: "Pilih pesan untuk membacanya.",
+    loadError: "Pohon chat tidak dapat dimuat.",
+    user: "Anda",
+    assistant: "Asisten",
+  },
   turns: {
     label: "Giliran {number}",
     bookmarkedLabel: "Giliran {number}, ditandai",

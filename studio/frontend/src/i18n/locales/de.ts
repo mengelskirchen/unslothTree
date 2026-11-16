@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const de = {
+  chatTree: {
+    title: "Chat-Baum",
+    allChats: "Alle Chats",
+    chooseMessage: "Wähle eine Nachricht aus, um sie zu lesen.",
+    loadError: "Der Chat-Baum konnte nicht geladen werden.",
+    user: "Du",
+    assistant: "Assistent",
+  },
   turns: {
     label: "Runde {number}",
     bookmarkedLabel: "Runde {number}, mit Lesezeichen",

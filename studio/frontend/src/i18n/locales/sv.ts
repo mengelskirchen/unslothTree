@@ -2,6 +2,14 @@
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
 export const sv = {
+  chatTree: {
+    title: "Chatträd",
+    allChats: "Alla chattar",
+    chooseMessage: "Välj ett meddelande för att läsa det.",
+    loadError: "Det gick inte att läsa in chatträdet.",
+    user: "Du",
+    assistant: "Assistent",
+  },
   turns: {
     label: "Tur {number}",
     bookmarkedLabel: "Tur {number}, bokmärkt",

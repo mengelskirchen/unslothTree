@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const nl = {
+  chatTree: {
+    title: "Chatboom",
+    allChats: "Alle chats",
+    chooseMessage: "Selecteer een bericht om het te lezen.",
+    loadError: "De chatboom kon niet worden geladen.",
+    user: "Jij",
+    assistant: "Assistent",
+  },
   turns: {
     label: "Beurt {number}",
     bookmarkedLabel: "Beurt {number}, met bladwijzer",

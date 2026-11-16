@@ -80,6 +80,7 @@ import {
 } from "@/features/hub/inventory";
 import { modelIdsMatch } from "@/features/hub/lib/model-identity";
 import { ChatHeaderMenu } from "./components/chat-header-menu";
+import { ChatTreeButton } from "@/features/chat-tree";
 import { DeleteChatFilesSwitch } from "./components/delete-chat-files-switch";
 import { chatLocalModelOptions } from "./local-model-options";
 import {
@@ -5093,6 +5094,7 @@ export function ChatPage({
             {view.mode === "single" && (
               <ChatHeaderMenu temporary={incognito} onToggleTemporary={toggleIncognito} />
             )}
+            {active && !incognito && <ChatTreeButton />}
             {(view.mode === "single" || view.mode === "project") && !isMobile ? (
               <BrowserToggleButton
                 active={active}

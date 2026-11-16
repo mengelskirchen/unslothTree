@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const fa = {
+  chatTree: {
+    title: "درخت گفتگوها",
+    allChats: "همهٔ گفتگوها",
+    chooseMessage: "برای خواندن، پیامی را انتخاب کنید.",
+    loadError: "درخت گفتگوها بارگیری نشد.",
+    user: "شما",
+    assistant: "دستیار",
+  },
   turns: {
     label: "نوبت {number}",
     bookmarkedLabel: "نوبت {number}، نشانک‌شده",

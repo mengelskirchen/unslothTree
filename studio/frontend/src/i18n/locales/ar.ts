@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const ar = {
+  chatTree: {
+    title: "شجرة المحادثات",
+    allChats: "كل المحادثات",
+    chooseMessage: "اختر رسالة لقراءتها.",
+    loadError: "تعذّر تحميل شجرة المحادثات.",
+    user: "أنت",
+    assistant: "المساعد",
+  },
   turns: {
     label: "الجولة {number}",
     bookmarkedLabel: "الجولة {number}، عليها إشارة مرجعية",

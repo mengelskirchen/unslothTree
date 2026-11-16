@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const th = {
+  chatTree: {
+    title: "แผนผังแชต",
+    allChats: "แชตทั้งหมด",
+    chooseMessage: "เลือกข้อความที่ต้องการอ่าน",
+    loadError: "โหลดแผนผังแชตไม่ได้",
+    user: "คุณ",
+    assistant: "ผู้ช่วย",
+  },
   turns: {
     label: "รอบที่ {number}",
     bookmarkedLabel: "รอบที่ {number} (บุ๊กมาร์กแล้ว)",
