@@ -353,6 +353,14 @@ jobs:
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ''
         run: npx --prefix studio tauri build --debug --no-bundle
 
+      - name: Upload Windows debug executable
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9  # v7.0.2
+        with:
+          name: unsloth-studio-windows-debug
+          path: studio/src-tauri/target/debug/unsloth-studio.exe
+          if-no-files-found: error
+
       # GPU rendering Off must reach WebView2 as --disable-gpu without dropping wry's default
       # flags; Auto must leave the arguments alone. The second launch follows the first at once,
       # so a WebView2 that cannot switch arguments on a fast relaunch fails here.

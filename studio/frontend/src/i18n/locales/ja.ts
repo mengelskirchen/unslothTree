@@ -6,6 +6,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const ja = {
+  chatTree: {
+    title: "チャットツリー",
+    allChats: "すべてのチャット",
+    chooseMessage: "読むメッセージを選択してください。",
+    loadError: "チャットツリーを読み込めませんでした。",
+    user: "あなた",
+    assistant: "アシスタント",
+  },
   turns: {
     label: "ターン {number}",
     bookmarkedLabel: "ターン {number}（ブックマーク済み）",

@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const pl = {
+  chatTree: {
+    title: "Drzewo czatów",
+    allChats: "Wszystkie czaty",
+    chooseMessage: "Wybierz wiadomość, aby ją przeczytać.",
+    loadError: "Nie udało się wczytać drzewa czatów.",
+    user: "Ty",
+    assistant: "Asystent",
+  },
   turns: {
     label: "Tura {number}",
     bookmarkedLabel: "Tura {number}, z zakładką",

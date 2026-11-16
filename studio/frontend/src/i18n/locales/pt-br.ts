@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const ptBR = {
+  chatTree: {
+    title: "Árvore de chats",
+    allChats: "Todos os chats",
+    chooseMessage: "Selecione uma mensagem para ler.",
+    loadError: "Não foi possível carregar a árvore de chats.",
+    user: "Você",
+    assistant: "Assistente",
+  },
   turns: {
     label: "Turno {number}",
     bookmarkedLabel: "Turno {number}, com marcador",

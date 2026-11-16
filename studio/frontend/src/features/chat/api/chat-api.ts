@@ -857,6 +857,7 @@ export async function listChatThreads(
     pairId?: string;
     projectId?: string | null;
     includeArchived?: boolean;
+    signal?: AbortSignal;
   } = {},
 ): Promise<ThreadRecord[]> {
   const params = new URLSearchParams();
@@ -867,7 +868,9 @@ export async function listChatThreads(
     params.set("include_archived", String(args.includeArchived));
   }
   const qs = params.toString();
-  const response = await authFetch(`/api/chat/threads${qs ? `?${qs}` : ""}`);
+  const response = await authFetch(`/api/chat/threads${qs ? `?${qs}` : ""}`, {
+    signal: args.signal,
+  });
   const data = await parseJsonOrThrow<{ threads: ThreadRecord[] }>(response);
   noteAdvertisedPatchGuards(data);
   // Always hand back an array: an older or misbehaving backend may omit it or send a non-array.
@@ -1361,9 +1364,11 @@ export async function deleteChatProject(
 
 export async function listChatMessages(
   threadId: string,
+  options: { signal?: AbortSignal } = {},
 ): Promise<MessageRecord[]> {
   const response = await authFetch(
     `/api/chat/threads/${encodeURIComponent(threadId)}/messages`,
+    { signal: options.signal },
   );
   if (response.status === 404) return [];
   const data = await parseJsonOrThrow<{ messages: MessageRecord[] }>(response);
@@ -1376,12 +1381,13 @@ export async function listChatMessages(
  */
 export async function batchListChatMessages(
   threadIds: string[],
-  options: { view?: "search" } = {},
+  options: { view?: "search"; signal?: AbortSignal } = {},
 ): Promise<Map<string, MessageRecord[]>> {
   const out = new Map<string, MessageRecord[]>();
   if (threadIds.length === 0) return out;
   const response = await authFetch("/api/chat/messages:batch", {
     method: "POST",
+    signal: options.signal,
     headers: { "content-type": "application/json" },
     body: JSON.stringify(
       options.view ? { threadIds, view: options.view } : { threadIds },
@@ -1389,7 +1395,7 @@ export async function batchListChatMessages(
   });
   if (response.status === 404 || response.status === 405) {
     const per = await Promise.all(
-      threadIds.map(async (id) => [id, await listChatMessages(id)] as const),
+      threadIds.map(async (id) => [id, await listChatMessages(id, options)] as const),
     );
     for (const [id, msgs] of per) out.set(id, msgs);
     return out;

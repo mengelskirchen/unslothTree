@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const cs = {
+  chatTree: {
+    title: "Strom chatů",
+    allChats: "Všechny chaty",
+    chooseMessage: "Vyberte zprávu, kterou si chcete přečíst.",
+    loadError: "Strom chatů se nepodařilo načíst.",
+    user: "Vy",
+    assistant: "Asistent",
+  },
   turns: {
     label: "Kolo {number}",
     bookmarkedLabel: "Kolo {number}, se záložkou",

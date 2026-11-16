@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const tr = {
+  chatTree: {
+    title: "Sohbet ağacı",
+    allChats: "Tüm sohbetler",
+    chooseMessage: "Okumak için bir mesaj seçin.",
+    loadError: "Sohbet ağacı yüklenemedi.",
+    user: "Siz",
+    assistant: "Asistan",
+  },
   turns: {
     label: "Tur {number}",
     bookmarkedLabel: "Tur {number}, yer imli",

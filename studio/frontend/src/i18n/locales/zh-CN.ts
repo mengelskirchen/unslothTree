@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const zhCN = {
+  chatTree: {
+    title: "聊天树",
+    allChats: "所有聊天",
+    chooseMessage: "选择要阅读的消息。",
+    loadError: "无法加载聊天树。",
+    user: "你",
+    assistant: "助手",
+  },
   turns: {
     label: "第 {number} 轮",
     bookmarkedLabel: "第 {number} 轮，已加书签",

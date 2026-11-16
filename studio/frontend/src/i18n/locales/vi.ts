@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const vi = {
+  chatTree: {
+    title: "Cây cuộc trò chuyện",
+    allChats: "Tất cả cuộc trò chuyện",
+    chooseMessage: "Chọn một tin nhắn để đọc.",
+    loadError: "Không thể tải cây cuộc trò chuyện.",
+    user: "Bạn",
+    assistant: "Trợ lý",
+  },
   turns: {
     label: "Lượt {number}",
     bookmarkedLabel: "Lượt {number}, đã đánh dấu",

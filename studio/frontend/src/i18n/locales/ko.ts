@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const ko = {
+  chatTree: {
+    title: "채팅 트리",
+    allChats: "모든 채팅",
+    chooseMessage: "읽을 메시지를 선택하세요.",
+    loadError: "채팅 트리를 불러오지 못했습니다.",
+    user: "나",
+    assistant: "어시스턴트",
+  },
   turns: {
     label: "턴 {number}",
     bookmarkedLabel: "턴 {number}, 북마크됨",

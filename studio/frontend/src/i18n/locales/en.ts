@@ -2,6 +2,14 @@
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
 export const en = {
+  chatTree: {
+    title: "Chat Tree",
+    allChats: "All chats",
+    chooseMessage: "Select a message to read it.",
+    loadError: "Could not load the chat tree.",
+    user: "You",
+    assistant: "Assistant",
+  },
   turns: {
     label: "Turn {number}",
     bookmarkedLabel: "Turn {number}, bookmarked",

@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en";
 
 export const he = {
+  chatTree: {
+    title: "עץ השיחות",
+    allChats: "כל השיחות",
+    chooseMessage: "יש לבחור הודעה כדי לקרוא אותה.",
+    loadError: "לא ניתן לטעון את עץ השיחות.",
+    user: "אתם",
+    assistant: "העוזר",
+  },
   turns: {
     label: "סבב {number}",
     bookmarkedLabel: "סבב {number}, מסומן",

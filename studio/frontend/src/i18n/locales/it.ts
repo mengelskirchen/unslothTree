@@ -2,6 +2,14 @@
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
 export const it = {
+  chatTree: {
+    title: "Albero delle chat",
+    allChats: "Tutte le chat",
+    chooseMessage: "Seleziona un messaggio per leggerlo.",
+    loadError: "Impossibile caricare l’albero delle chat.",
+    user: "Tu",
+    assistant: "Assistente",
+  },
   turns: {
     label: "Turno {number}",
     bookmarkedLabel: "Turno {number}, nei segnalibri",

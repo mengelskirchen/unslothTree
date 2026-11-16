@@ -5,6 +5,14 @@ import type { DeepPartialMessageTree } from "../types";
 import type { en } from "./en.ts";
 
 export const hi = {
+  chatTree: {
+    title: "चैट ट्री",
+    allChats: "सभी चैट",
+    chooseMessage: "पढ़ने के लिए कोई संदेश चुनें।",
+    loadError: "चैट ट्री लोड नहीं हो सका।",
+    user: "आप",
+    assistant: "सहायक",
+  },
   turns: {
     label: "टर्न {number}",
     bookmarkedLabel: "टर्न {number}, बुकमार्क किया गया",
